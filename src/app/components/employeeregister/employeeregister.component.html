@@ -1,0 +1,76 @@
+<div class="container">
+
+    <div class="card">
+        <div class="card-body">
+            <h3 class="text-center">Registration Form</h3>
+
+
+            <!-- Form Started  -->
+            <form>
+
+                <!-- NAME -->
+                <div class="form-group">
+                    <label for="exampleInputEmail">Full Name</label>
+                    <input type="text" class="form-control" id="inputFullName" name="name" [(ngModel)]="data.name" aria-describedby="emailHelp"
+                        required>
+                </div>
+               
+                <!-- Salary -->
+                <div class="form-group">
+                    <label for="exampleInputEmail">salary</label>
+                    <input type="number" class="form-control" id="inputSalary" name="salary" [(ngModel)]="data.salary"
+                        aria-describedby="emailHelp" required>
+                </div>
+
+                <!-- Gender -->
+                <div class="form-group">
+                    <label for="exampleInputEmail">Gender</label>
+                    <div class="form-check form-check-inline">
+                        <input classs="form-check-input" required type="radio" name="gender" [(ngModel)]="data.gender" id="inlineRadio1"
+                            value="male">
+                        <label class="form-check-label" for="inlineRadio1">Male</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input classs="form-check-input" required type="radio" name="gender" [(ngModel)]="data.gender" id="inlineRadio2"
+                            value="Female">
+                        <label class="form-check-label" for="inlineRadio1">Female</label>
+                    </div>
+                </div>
+
+                <!-- Emergency Contact Number -->
+                <div class="form-group">
+                    <label for="exampleInputEmail">Emergency Contact Number</label>
+                    <input type="number" class="form-control" id="inputEmergencyContact" name="emergencyContactNumber" [(ngModel)]="data.emergencyContactNumber"
+                        aria-describedby="emailHelp" required>
+                </div>
+
+
+               <!--Email -->
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="InputEmail1" name="emailId" [(ngModel)]="data.emailId"
+                        aria-describedby="emailHelp" required>
+                </div>
+
+                <!-- Submit -->
+                <div class="text-center">
+                    <button (click)="doSubmitForm()" [disabled] = "flag" type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </form>
+            <!-- Form End -->
+          <!--{{data | json}}-->  
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+</div>
